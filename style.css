@@ -21,6 +21,7 @@ body{
     margin: 20px;
     font-size: 14px;
     line-height: 1.6;
+
 }
 
 ul{
@@ -46,12 +47,14 @@ a:hover{
     color: blue;
 }
 
-header{ 
+header{
     padding-bottom: 15px;
     margin-bottom: 20px;
     border-bottom: 2px solid #ddddff;
 }
-
+#logo{
+  text-align: center;
+}
 #site_container{
     padding: 20px;
     max-width: 1100px;
@@ -59,6 +62,7 @@ header{
     background: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     border-radius: 5px;
+
 }
 
 #main_nav{
@@ -75,4 +79,83 @@ header{
 
 #main_nav a:hover{
     background: #ddddff;
+}
+
+#main_content{
+  background-color: #ddffff;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+#sidebar_content{
+  background-color: #ffffdd;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+}
+
+
+footer{
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(254,214,154);
+  padding: 1em;
+}
+
+footer nav a {
+  padding: .5em;
+}
+/*************TABLET SITE*****************/
+@media (min-width:600px){
+  body{
+    background-color: #ddffdd;
+  }
+  #main_nav {
+    display: flex;
+    justify-content: space-around;
+
+  }
+  #main_nav a{
+    flex-basis: 30%;
+    margin: 1em;
+  }
+
+  #sidebar_content{
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+  #sidebar_content>div{
+    margin-left: 1em;
+  }
+
+}
+/*********DESKTOP SIZE****************/
+
+@media (min-width:1100px){
+
+  #main_content {
+    display: flex;
+    flex-direction: row;
+    }
+  #main_content>div:first-child{
+    flex-basis: 66%;
+  }
+  #main_content>div:nth-child(2){
+    flex-basis: 33%;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+  }
+  #main_nav a{
+    width: 10em;
+  }
+
+
+  }
 }
